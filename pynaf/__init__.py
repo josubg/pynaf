@@ -246,7 +246,7 @@ class NAFDocument:
         # Prepare the word attributes
         word_attributes = dict(
             (k, v)
-            for (k, v) in kwargs.iteritems()
+            for (k, v) in kwargs.items()
             if k in self.valid_word_attributes)
         word_attributes[self.WORD_ID_ATTRIBUTE] = wid
         # Create a text sub-node for the word and set its attributes
@@ -313,7 +313,7 @@ class NAFDocument:
             for external_ref in external_refs:
                 ref_attributes = dict(
                     (k, v)
-                    for (k, v) in external_ref.iteritems()
+                    for (k, v) in external_ref.items()
                     if k in self.valid_externalRef_attributes)
                 keys = ref_attributes.keys()
                 for attribute in self.valid_externalRef_attributes:
